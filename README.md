@@ -8,5 +8,6 @@
   <li>|21/09/23|<ul>
     <li>+ Criada função 'main()' para o código principal</li>
     <li>+ Modulo 'bank_account' criado para as classes</li>
+    <li>+ Transferência saldo de uma conta para outra</li>
   </ul></li>
 </ul>
