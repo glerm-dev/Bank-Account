@@ -14,8 +14,7 @@ def action(a1, a2):
             a1.cashout(cashoutValue)
         elif(opition == 't'):
             transfer_value = float(input("Quantidade a ser transferida para outra conta: "))
-            a1.cashout(transfer_value)
-            a2.deposit(transfer_value)
+            a1.transfer(transfer_value, a2)
         
         quit = input("Sair(s) | Continuar(c): ")
         if(quit == 's'):

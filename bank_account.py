@@ -23,13 +23,19 @@ class BankAccount:
             if(cashoutValue > 500):
                 self.extrato.append("-R$ " + str(cashoutValue * tax) + " retirado")
                 self.saldo -= cashoutValue + (cashoutValue * tax)
-                print(f"-R${cashoutValue}, -R${cashoutValue * tax}de taxa retirados da conta")
+                print(f"-R${cashoutValue}, -R${cashoutValue * tax} de taxa retirados da conta")
                 self.printSaldo()
             else:
-                self.extrato.append("-R$ " + str(cashoutValue) + "retirado")
+                self.extrato.append("-R$ " + str(cashoutValue) + " retirado")
                 self.saldo -= cashoutValue 
                 print(f"-R${cashoutValue} retirados da conta")
                 self.printSaldo()
+
+    def transfer(self, transfer_value, target_account):
+        self.saldo -= transfer_value
+        target_account.deposit(transfer_value)
+        print("Transferência realizada")
+        self.extrato.append("-R$ " + str(transfer_value) + ' transferidos')
 
     def history(self):
         print(f"Historico da conta - {self.titular}: ")
