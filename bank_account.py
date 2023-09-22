@@ -32,6 +32,6 @@ class BankAccount:
                 self.printSaldo()
 
     def history(self):
-        print("Historico da conta: ")
+        print(f"Historico da conta - {self.titular}: ")
         for i in self.extrato:
             print(i)
